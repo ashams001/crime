@@ -159,11 +159,9 @@ a:hover {
 
         <ul>
             <li><a class="active" href="bottom.php" target="last" >HOME</a></li>
-            <li><a href="viewcomplaint.php" target="last" >User Complaint</a></li>
-            <li><a href="FIR.php" target="last">FIR</a></li>
-            <li><a href="criminal.php" target="last">Criminals</a></li>
-            <li><a href="sectioncharges.php" target="last">Section Charges</a></li>
-            <li style="float: right;"><div class="dropdown" style="height:700px;">
+            <li><a href="complaint.php" target="last" >Complaint</a></li>
+            <li><a href="viewcomplaintstas.php" target="last">Complaint status</a></li>
+           <li style="float: right;"><div class="dropdown" style="height:700px;">
                         <button class="dropbtn"><b style="letter-spacing: 3px;">Hello,
 
                      <?php include("config.php");

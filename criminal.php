@@ -48,7 +48,7 @@
 	background: transparent;
 	margin-bottom: 10px;
 	font: 16px Arial, Helvetica, sans-serif;
-	height: 45px;
+	height: 40px;
 }
 .form-style-8 input[type="button"],
 .form-style-8 input[type="submit"]{
@@ -92,10 +92,3 @@
         </td>
   </body>
 </html>
- ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $criminalno = $_POST["criminalno"];
-  $cfname = $_POST["cfname"];
-  $clname = $_POST["clname"];
-  $gender = $_POST["gender"];
-  $age = $_POST["address"];
-  $FIR_No = $_POST["firno"];

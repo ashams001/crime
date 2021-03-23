@@ -15,40 +15,10 @@ $resultchart = mysqli_query($conn, $query2);
 <title>G . K . Hospital</title>
 <script type="text/javascript" src="pie.js"></script>
 <script type="text/javascript">
-       google.charts.load('current', {'packages':['corechart']});
-       google.charts.setOnLoadCallback(drawChart);
-       function drawChart()
-       {
-            var data = google.visualization.arrayToDataTable([
-                      ['Gender', 'Number'],
-                      <?php
-                      while($row = mysqli_fetch_array($resultchart))
-                      {
-                        $rt = $row["report_type"];
-                        if($rt =="ogone"){
-                          $rt="OB First Trimester USG Report";
-                        }elseif($rt =="obtwo"){
-                          $rt="OB 2/3 Trimester USG Report";
-                        }elseif($rt =="pelvis"){
-                          $rt="Pelvis Scan Report";
-                        }elseif($rt =="pelvistwo"){
-                          $rt="Pelvis Scan Report(2)";
-                        }
-                           echo "['".$rt."', ".$row["number"]."],";
-                      }
-                      ?>
-                 ]);
-            var options = {
-                  title: '',
-                  //is3D:true,
-                  pieHole: 0.4
-                 };
-            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-            chart.draw(data, options);
-       }
+       
        </script>
 </head>
-  <body background="../images/officer.jpg" style="background-size: 70%;background-repeat: no-repeat;">
-    <div id="piechart" style="width: 800px; height: 100px;"></div>
+  <body background="login2.jfif" style="background-size: 70%;background-repeat: no-repeat;">
+    
   </body>
 </html>

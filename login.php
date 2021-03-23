@@ -46,7 +46,7 @@ if ($result->num_rows > 0) {
   // Storing session data
   $_SESSION["User_Fname"] = $uname;
   $_SESSION["User_Type"] = "civil";
-          include'admin.php';
+          include'user.php';
         } else {
           echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }

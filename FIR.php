@@ -49,7 +49,7 @@
 	background: transparent;
 	margin-bottom: 10px;
 	font: 16px Arial, Helvetica, sans-serif;
-	height: 45px;
+	height: 35px;
 }
 .form-style-8 input[type="button"],
 .form-style-8 input[type="submit"]{

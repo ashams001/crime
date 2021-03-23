@@ -85,7 +85,7 @@
               <input type="text" name="lname" placeholder="Last Name" required/>
               <input type="text" name="usertype" placeholder="User Type" required/>
               <input type="password" name="password" placeholder="Password" required/>
-              <textarea style="" name="address" placeholder="Address" required></textarea>
+              <textarea style="text" name="address" placeholder="Address" required></textarea>
               <input type="text" name="city" placeholder="City" required/>
               <input type="text" name="state" placeholder="State" required/>
               <input type="number" name="zipcode" placeholder="Zipcode" required/>

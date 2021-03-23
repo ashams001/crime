@@ -26,12 +26,17 @@
 	padding: 20px;
 	margin: -30px -30px 30px -30px;
 }
-
+.form-style-8 input[type="number"],
 .form-style-8 input[type="number"],
 .form-style-8 input[type="text"],
-.form-style-8 selection,
+.form-style-8 input[type="date"],
+.form-style-8 input[type="email"],
+.form-style-8 input[type="number"],
+.form-style-8 input[type="tel"],
+.form-style-8 input[type="url"],
+.form-style-8 input[type="password"],
 .form-style-8 textarea,
-
+.form-style-8 textarea
 {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -72,20 +77,23 @@
   </head>
   <body style="padding:0px;">
 
-}
- ?>
    
         <td style="padding-top: 0px;">
           <div class="form-style-8" style="padding-top:0px;">
-            <h2>Add New Section Charge</h2>
-            <form method="post" action="addUser.php">
-              <input type="number" name="sectionid" placeholder="Section ID" required />
-            <input type="text" name="description" placeholder="Description" required />
-            <input type="submit" value="Add" />
+            <h2>Add New Complaint</h2>
+            <form method="post" action="addcomplaint.php">
+              <input type="number" value="42" name="complaintno" placeholder="Complaint No" required />
+              <input type="number" name="userid" placeholder="User Id" required />
+            <input type="date" name="date" placeholder="Crime Date" required />             
+            <input type="text" name="vname" placeholder="Victim Name" required />
+            <input type="number" name="vage" placeholder="Victim Age" required />
+            <input type="text" name="vaddress" placeholder="Victim Address" required />
+            <input type="text" name="attackdescription" placeholder="Attack Description" required />
+            <input type="text" name="sname" placeholder="Suspect Name" required />
+            <input type="text" name="wname" placeholder="Witness Name" required />
+           <input type="submit" value="Add" />
             </form>
           </div>
         </td>
-      
-    
   </body>
 </html>
