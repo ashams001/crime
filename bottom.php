@@ -1,6 +1,7 @@
+<?php include("config.php");?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<?php include("config.php");
+<?php
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
 if (!$conn) {

@@ -1,3 +1,4 @@
+<?php include("config.php"); ?>
 <html>
     <head>
 <style>
@@ -166,7 +167,7 @@ a:hover {
             <li style="float: right;"><div class="dropdown" style="height:700px;">
                         <button class="dropbtn"><b style="letter-spacing: 3px;">Hello,
 
-                     <?php include("config.php");
+                     <?php
                      if(!isset($_SESSION)) {
                        session_start();
                      } 

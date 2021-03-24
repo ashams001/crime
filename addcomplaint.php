@@ -8,9 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $vaddress = $_POST["vaddress"];
   $attackdescription = $_POST["attackdescription"];
   $sname = $_POST["sname"]; 
-  $wname = $_POST["wname"];    
-            
-  
+  $wname = $_POST["wname"];
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);

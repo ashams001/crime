@@ -1,10 +1,10 @@
-<?php <?php include("config.php");
-$conn = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
+<?php include("config.php");
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$query = "SELECT * from complaint_registration where Complaint_No=; 
+$query = "SELECT * from complaint_registration where Complaint_No=";
 $result = mysqli_query($conn, $query) or die ( mysqli_error());
 $row = mysqli_fetch_assoc($result);
 ?>
@@ -26,10 +26,10 @@ $Complaint_No=$_REQUEST['Complaint_No'];
 
 $Victim_Name =$_REQUEST['name'];
 $Victim_Age =$_REQUEST['age'];
-$update="update  set 
-mysqli_query($con, $update) or die(mysqli_error());
-$status = "Record Updated Successfully. </br></br>
-echo '<p style="color:#FF0000;">'.$status.'</p>';
+$update="update  set ";
+mysqli_query($conn, $update) or die(mysqli_error());
+$status = "Record Updated Successfully. ";
+echo '</br></br><p style="color:#FF0000;">'.$status.'</p>';
 }else {
 ?>
 <div>

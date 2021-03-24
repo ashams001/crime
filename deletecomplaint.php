@@ -1,13 +1,8 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST" )
-{
+if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
     session_start();
 }
-$servername = "localhost";
-$dbusername = "root";
-$dbpassword = "";
-$dbname = "crimesystem";
-$conn = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
