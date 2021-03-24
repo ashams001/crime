@@ -1,9 +1,9 @@
-<?php (include config.php);
+<?php (include "config.php");
 
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-$Complaint_No=$_Request['Complaint_No']
+$Complaint_No=$_REQUEST['Complaint_No'];
 // Check connection
     
 if ($conn->connect_error) {
@@ -11,7 +11,7 @@ if ($conn->connect_error) {
 }
 
 // sql to delete a record
-$sql = "DELETE FROM complaint_registration WHERE Complaint_No=$Complaint_No";
+$sql = "DELETE FROM complaint_registration WHERE Complaint_No="."$Complaint_No";
 
 if ($conn->query($sql) === TRUE) {
   echo "Record deleted successfully";

@@ -3,8 +3,8 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$Complaint_No=$REQUEST['Complaint_No']
-$query = "SELECT * from complaint_registration where Complaint_No='$Complaint_No'";
+$Complaint_No=$_REQUEST['Complaint_No'];
+$query = "SELECT * from complaint_registration where Complaint_No="."$Complaint_No";
 $result = mysqli_query($conn, $query) or die ( mysqli_error());
 $row = mysqli_fetch_assoc($result);
 ?>
@@ -28,9 +28,8 @@ $Victim_Name =$_REQUEST['name'];
 $Victim_Age =$_REQUEST['age'];
 $update="update  set ";
 mysqli_query($conn, $update) or die(mysqli_error());
-$status = "Record Updated Successfully. </br> </br>
-    <a href = 'viewcomplaint.php'> </a>"
-echo '</br></br><p style="color:#FF0000;">'.$status.'</p>';
+$status = "Record Updated Successfully.";
+echo '</br></br><a href = \'viewcomplaint.php\'> </a><p style="color:#FF0000;">'.$status.'</p>';
 }else {
 ?>
 <div>
