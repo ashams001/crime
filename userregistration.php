@@ -83,8 +83,8 @@
               <input type="number" name="userid" placeholder="User Id" required />
               <input type="text" name="fname" placeholder="First Name" required />
               <input type="text" name="lname" placeholder="Last Name" required/>
-              <input type="text" name="usertype" placeholder="User Type" required/>
-              <input type="password" name="password" placeholder="Password" required/>
+              <input type="text" name="userty" placeholder="User Type" required/>
+              <input type="password" name="pass" placeholder="Password" required/>
               <textarea style="text" name="address" placeholder="Address" required></textarea>
               <input type="text" name="city" placeholder="City" required/>
               <input type="text" name="state" placeholder="State" required/>

@@ -27,10 +27,15 @@
 	margin: -30px -30px 30px -30px;
 }
 
-.form-style-8 input[type="number"],
 .form-style-8 input[type="text"],
-.form-style-8 selection,
+.form-style-8 input[type="date"],
+.form-style-8 input[type="email"],
+.form-style-8 input[type="number"],
+.form-style-8 input[type="tel"],
+.form-style-8 input[type="url"],
+.form-style-8 input[type="password"],
 .form-style-8 textarea,
+.form-style-8 select
 
 {
 	box-sizing: border-box;
@@ -74,9 +79,9 @@
         <td style="padding-top: 0px;">
           <div class="form-style-8" style="padding-top:0px;">
             <h2>Add New Section Charge</h2>
-            <form method="post" action="addUser.php">
+            <form method="post" action="addsectioncharges.php">
               <input type="number" name="sectionid" placeholder="Section ID" required />
-            <input type="text" name="description" placeholder="Description" required />
+            <input type="text" name="crimetype" placeholder="Crime Type" required />
             <input type="submit" value="Add" />
             </form>
           </div>

@@ -77,7 +77,7 @@ img  {
 </td></tr><tr><td><br/>
 <input type="text" name="uname" maxlength="30" style="width: 100%;    padding: 12px 20px;    margin: 8px 0;    display: inline-block;    border: 1px solid #ccc;    border-radius: 4px;    box-sizing: border-box;" placeholder="Enter Username"  required>
 <BR>
-    </tr> </td>td> <tr>
+     <td> <tr>
 <td>
 <input type="password" style="width: 100%;    padding: 12px 20px;    margin: 8px 0;    display: inline-block;    border: 1px solid #ccc;    border-radius: 4px;    box-sizing: border-box;"placeholder="Enter Password" name="psw" maxlength="30" required>
 <br><br><br>
@@ -89,6 +89,10 @@ img  {
 </td></tr>
     <tr>
 <td>
+    <tr>
+<td>
+    <tr>
+<td>
 <button id="myButton" class="float-left submit-button">New User Register Here!!!</button>
 
 <script type="text/javascript">
@@ -96,15 +100,18 @@ img  {
     document.getElementById("myButton").onclick = function () {
         location.href = "userregistration.php";
     </script>
-</td></tr>  
- 
-    </table> </div>
-
-</form>
-    <form name='login' method="POST" action="userregistration.php" >  
-<button id="newb" class="float-left submit-button">New User Register Here!!!
-
-    </button>
-</form> 
-  </body>
+</td></tr> 
+        </td>
+    </tr>
+        </td>
+         </tr>
+    </td>
+    </BR>
+    </td>
+    </tr>
+    </table>
+    </div>
+    </form>
+    </body>
 </html>
+

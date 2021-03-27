@@ -13,13 +13,13 @@ $resultchart = mysqli_query($conn, $query2);
 
 <head>
 <link rel = "icon" type = "image/png" href = "images/logo.png" />
-<title>G . K . Hospital</title>
+<title>Police</title>
 <script type="text/javascript" src="pie.js"></script>
 <script type="text/javascript">
        
        </script>
 </head>
-  <body background="login2.jfif" style="background-size: 70%;background-repeat: no-repeat;">
+  <body background="officer3.jpg" style="background-size: 70%;background-repeat: no-repeat;">
     
   </body>
 </html>

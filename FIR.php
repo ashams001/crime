@@ -28,6 +28,7 @@
 }
 .form-style-8 input[type="text"],
 .form-style-8 input[type="date"],
+.form-style-8 input[type="time"],
 .form-style-8 input[type="email"],
 .form-style-8 input[type="number"],
 .form-style-8 input[type="tel"],
@@ -52,6 +53,8 @@
 	height: 35px;
 }
 .form-style-8 input[type="button"],
+.form-style-8 input[type="submit"]
+.form-style-8 input[type="button"],
 .form-style-8 input[type="submit"]{
 	-moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
 	-webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
@@ -68,7 +71,9 @@
 	text-transform: uppercase;
 }
 .form-style-8 input[type="button"]:hover,
-.form-style-8 input[type="submit"]:hover {
+.form-style-8 input[type="submit"]:hover 
+.form-style-8 input[type="button"]:hover,
+.form-style-8 input[type="submit"]:hover{
 	background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
 	background-color:#34CACA;
 }
@@ -78,7 +83,7 @@
      <td style="padding-top: 0px;">
           <div class="form-style-8" style="padding-top:0px;">
             <h2>Add New FIR</h2>
-            <form method="post" action="addFIR.php">
+            <form method="post" action="addFIR.php" value=>
               <input type="number" name="firno" placeholder="FIR No" required />
               <input type="number" name="complaintno" placeholder="Complaint No" required />
               <input type="number" name="officerid" placeholder="Officer Id" required />
@@ -91,6 +96,8 @@
               <input type="text" name="accusedname" placeholder="Accused Name" required />
               <input type="submit" value="Add" />
             </form>
+              <form method="post" action="viewcomplaint.php">
+                <input type="submit" value="View" /></form>
           </div>
         </td>
   </body>

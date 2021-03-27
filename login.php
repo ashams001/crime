@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				}elseif ($type=='civil') {
 					// code...date_default_timezone_set("Asia/Calcutta"); $datew="hour minute : ";
 
-					$sql = "INSERT INTO Log (User_Id,User_Name,User_Type)VALUES ('$userid',$uname','$type')";
+					$sql = "INSERT INTO Log (User_Id,User,User_Type)VALUES ('$userid','$uname','$type')";
 					if (mysqli_query($conn, $sql)) {
 						session_start();
 

@@ -67,13 +67,13 @@ if (!$conn) {
     
 <?php
 $count=1;
-$sel_query="SELECT * FROM complaint_registration INNER JOIN complaint_status ON complaint_registration.Complaint_No=complaint_status.Complaint_No";
+$sel_query="SELECT * FROM fir_registration INNER JOIN complaint_status ON complaint_registration.Complaint_No=complaint_status.Complaint_No";
 
 $result = mysqli_query($conn,$sel_query) or die( mysqli_error($conn));
 while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) { ?>
 
 <tr><td align="center"><?php echo $count; ?></td>
-<td align="center"><?php echo $row["Complaint_No"]; ?></td>
+<td align="center"><?php echo $row["FIR_No"]; ?></td>
 <td align="center"><?php echo $row["User_Id"]; ?></td>
 <td align="center"><?php echo $row["Date"]; ?></td>
 <td align="center"><?php echo $row["Victim_Name"]; ?></td>
@@ -84,10 +84,10 @@ while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) { ?>
 <td align="center"><?php echo $row["Witness_Name"]; ?></td>
 <td align="center"><?php echo $row["Status"]; ?></td>
 <td align="center">
-<a href="editform.php? id=<?php echo $row["Complaint_No"]; ?>">Edit</a>
+<a href="editcomplaint.php? id=<?php echo $row["FIR_No"]; ?>">Edit</a>
     </td>    
 <td align="center">
-<a href="deletecomplaint.php? id=<?php echo $row["Complaint_No"]; ?>">Delete</a>
+<a href="deletecomplaint.php? id=<?php echo $row["FIR_No"]; ?>">Delete</a>
     </td>
                                  
 <?php $count++; } ?>

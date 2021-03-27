@@ -8,7 +8,7 @@ if(session_id() != ''){
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <link rel = "icon" type = "image/png" href = "images/logo.png" />
-        <title>G . K . Hospital</title><style>
+        <title>Police</title><style>
 
         </style>
     </head>
