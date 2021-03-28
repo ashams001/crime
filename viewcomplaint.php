@@ -17,34 +17,16 @@ if (!$conn) {
 </head>
 <body>
 <div class="form">
-    <p><a href="top.php"></a></p>
+	<?php include("top.php");
+	session_start();
+	if(isset($_SESSION['Success_Message'])){
+		echo "<h3 class='success_message'>".$_SESSION['Success_Message']."</h3>";
+	}
+	$_SESSION['Success_Message']=null;
+	?>
 <h2>User Complaints</h2>
 
 <table width="100%" border="4" style="border-collapse:collapse;">
-<head>
-    <style>
-        form-style-8 input[type="button"],
-.form-style-8 input[type="submit"]{
-	-moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-	-webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-	box-shadow: inset 0px 1px 0px 0px #45D6D6;
-	background-color: #2CBBBB;
-	border: 1px solid #27A0A0;
-	display: inline-block;
-	cursor: pointer;
-	color: #FFFFFF;
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 14px;
-	padding: 8px 18px;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-.form-style-8 input[type="button"]:hover,
-.form-style-8 input[type="submit"]:hover {
-	background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
-	background-color:#34CACA;
-}
-    </style>
 <tr>
 <th><strong>Count</strong></th>
 <th><strong>Complaint No</strong></th>
@@ -61,10 +43,6 @@ if (!$conn) {
 <th><strong>Delete</strong></th>
 </tr>
 
-    
-</head>
-<body>
-    
 <?php
 $count=1;
 $sel_query="SELECT * FROM complaint_registration INNER JOIN complaint_status ON complaint_registration.Complaint_No=complaint_status.Complaint_No";
@@ -84,10 +62,10 @@ while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) { ?>
 <td align="center"><?php echo $row["Witness_Name"]; ?></td>
 <td align="center"><?php echo $row["Status"]; ?></td>
 <td align="center">
-<a href="editform.php? id=<?php echo $row["Complaint_No"]; ?>">Edit</a>
+<a href="editcomplaintform.php?id=<?php echo $row["Complaint_No"]; ?>">Edit</a>
     </td>    
 <td align="center">
-<a href="deletecomplaint.php? id=<?php echo $row["Complaint_No"]; ?>">Delete</a>
+<a href="deletecomplaint.php?id=<?php echo $row["Complaint_No"]; ?>">Delete</a>
     </td>
                                  
 <?php $count++; } ?>
