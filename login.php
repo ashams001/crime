@@ -3,9 +3,6 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$uname = $_POST["uname"];
 	$pass = $_POST["psw"];
-
-//require 'dbcon.php';
-
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
 	if (!$conn) {
@@ -24,11 +21,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					$sql = "INSERT INTO Log (User_Id,User,User_Type)VALUES ('$userid','$uname','$type')";
 					if ($conn->query($sql) === TRUE) {
 						session_start();
-
-// Storing session data
+						// Storing session data
 						$_SESSION["User_Fname"] = $uname;
 						$_SESSION["User_Type"] = "officer";
-						include 'admin.php';
+						$_SESSION['Success_Message'] = null;
+						header("Location: admin.php");
 					}
 				}elseif ($type=='civil') {
 					// code...date_default_timezone_set("Asia/Calcutta"); $datew="hour minute : ";
@@ -57,8 +54,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		include'index.php';
 		echo'<div class="footer">   <strong>    Error!    </strong>    invalid password     </div>';
 	}
-
 	mysqli_close($conn);
-
 }
 ?>

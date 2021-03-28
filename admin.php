@@ -1,6 +1,6 @@
 <?php
-
-if(session_id() != ''){
+session_start();
+if(isset($_SESSION)){
 //echo 'Welcome, ' . $_SESSION["username"];
 ?>
 <html>
@@ -8,20 +8,16 @@ if(session_id() != ''){
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <link rel = "icon" type = "image/png" href = "images/logo.png" />
-        <title>Police</title><style>
-
-        </style>
+        <title>Police</title>
     </head>
-
-    <frameset rows="16%,*" noresize border="0" >
-        <frame src="top.php" scrolling="no">
-        <frame src="bottom.php"name="last">
-    </frameset>
-
-</html>
+<body>
 <?php
+include("top.php");
+include("bottom.php");
 }else{
   require 'sessionerror.php';
 }
 
 ?>
+</body>
+</html>
