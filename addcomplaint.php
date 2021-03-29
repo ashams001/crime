@@ -20,7 +20,7 @@ $sql = "INSERT INTO complaint_registration(Complaint_No, User_Id, Date, Victim_N
 if ($conn->query($sql) === TRUE) {
   $sql = "INSERT INTO complaint_status(Complaint_No, Status) VALUES('$complaintno','Open')";
   if ($conn->query($sql) === TRUE) {
-    include 'Usertop.php.php';
+    include 'Usertop.php';
     echo "<h3 style='position: fixed; top:0;'> New Criminal Added Successfully!!!</h3><br/>";
   }
 } else {include 'sessionerror.php';
