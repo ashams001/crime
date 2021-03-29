@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						$_SESSION["User_Fname"] = $uname;
 						$_SESSION["User_Type"] = "civil";
 						$_SESSION['Success_Message'] = null;
-						include'user.php';
+						header("Location: user.php");
 					} else {
 						echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 					}

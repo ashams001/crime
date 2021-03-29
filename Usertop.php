@@ -158,7 +158,7 @@ a:hover {
 
 
         <ul>
-            <li><a class="active" href="bottom.php" target="last" >HOME</a></li>
+            <li><a class="active" href="user.php" target="last" >HOME</a></li>
             <li><a href="complaint.php" target="last" >Complaint</a></li>
             <li><a href="viewcomplaintstas.php" target="last">Complaint status</a></li>
            <li style="float: right;"><div class="dropdown" style="height:700px;">
