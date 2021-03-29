@@ -97,7 +97,7 @@
               <input type="text" name="accusedname" placeholder="Accused Name" required />
               <input type="submit" value="Add" />
             </form>
-              <form method="post" action="viewcomplaint.php">
+              <form method="post" action="viewfir.php">
                 <input type="submit" value="View" /></form>
           </div>
         </td>

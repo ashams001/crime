@@ -15,6 +15,8 @@
             <input type="text" name="crimetype" placeholder="Crime Type" required />
             <input type="submit" value="Add" />
             </form>
+              <form method="post" action="viewsectioncharge.php">
+                <input type="submit" value="View" /></form>
           </div>
         </td>
       
